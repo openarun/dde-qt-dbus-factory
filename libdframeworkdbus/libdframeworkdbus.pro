@@ -35,6 +35,7 @@ HEADERS += \
     types/dbusobjectpathlist.h \
     types/linkinfolist.h \
     types/sinkinfolist.h \
+    types/appscgroupinfo.h \
     types/appscgroupinfolist.h
 
 SOURCES += \
