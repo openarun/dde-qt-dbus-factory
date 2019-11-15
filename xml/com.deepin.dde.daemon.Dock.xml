@@ -82,7 +82,6 @@
   <property name="DisplayMode" type="i" access="readwrite"/>
   <property name="Position" type="i" access="readwrite"/>
   <property name="IconSize" type="u" access="readwrite"/>
-  <property name="WindowSize" type="u" access="readwrite"/>
   <property name="WindowSizeEfficient" type="u" access="readwrite"/>
   <property name="WindowSizeFashion" type="u" access="readwrite"/>
   <property name="ShowTimeout" type="u" access="readwrite"/>
