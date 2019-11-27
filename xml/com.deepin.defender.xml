@@ -1,0 +1,51 @@
+<interface name="com.deepin.defender">
+  <signal name="requestDissectionId">
+    <arg type="i" direction="out"/>
+  </signal>
+  <signal name="requestDissectionPath">
+    <arg type="s" direction="out"/>
+  </signal>
+  <signal name="requestCheck">
+  </signal>
+  <signal name="requestUpdate">
+  </signal>
+  <method name="loadEngine">
+    <arg name="type" type="s" direction="in"/>
+  </method>
+  <method name="dissection">
+    <arg name="processId" type="i" direction="in"/>
+  </method>
+  <method name="dissection">
+    <arg name="path" type="s" direction="in"/>
+  </method>
+  <method name="setDissectionState">
+    <arg type="b" direction="out"/>
+    <arg name="taskId" type="i" direction="in"/>
+    <arg name="state" type="i" direction="in"/>
+  </method>
+  <method name="check">
+  </method>
+  <method name="update">
+  </method>
+  <property name="dissectionInfo" type="{i(is)}" access="read">
+    <annotation name="org.qtproject.QtDBus.QtTypeName" value="DefenderDissection"/>
+  </property>
+  <signal name="dissectionInfoChanged">
+    <arg name="info" type="{i(is)}" direction="out"/>
+    <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="DefenderDissection"/>
+  </signal>
+  <property name="versionInfo" type="(sst)" access="read">
+    <annotation name="org.qtproject.QtDBus.QtTypeName" value="DefenderVersionInfo"/>
+  </property>
+  <signal name="versionInfoChanged">
+    <arg name="info" type="(sst)" direction="out"/>
+    <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="DefenderVersionInfo"/>
+  </signal>
+  <property name="updateInfo" type="{d(sst)}" access="read">
+    <annotation name="org.qtproject.QtDBus.QtTypeName" value="DefenderUpdateState"/>
+  </property>
+  <signal name="updateInfoChanged">
+    <arg name="info" type="{d(sst)}" direction="out"/>
+    <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="DefenderUpdateState"/>
+  </signal>
+</interface>
