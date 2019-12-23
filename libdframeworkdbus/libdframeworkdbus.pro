@@ -101,6 +101,7 @@ SOURCES += \
     types/launcheriteminfolist.cpp
 
 !system(python $$PWD/generate_code.py): error("Failed to generate code")
+!system(python $$PWD/generate_redefine_code.py): error("Failed to generate_redefine code")
 include(generated/generated.pri)
 
 isEmpty(LIB_INSTALL_DIR) {
