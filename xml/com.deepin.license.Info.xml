@@ -1,0 +1,4 @@
+<interface name="com.deepin.license.Info">
+  <signal name="LicenseStateChange">
+  </signal>
+</interface>
