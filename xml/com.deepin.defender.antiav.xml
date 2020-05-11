@@ -1,0 +1,79 @@
+<node>
+  <interface name="com.deepin.defender.antiav">
+  <!--  <property access="read" type="(sddiss)" name="singleFuncData"/>-->
+  <!--  <property access="read" type="d" name="globalRecv"/>-->
+    <property access="read" type="d" name="globalRecv"/>
+    <signal name="NotifyDetailData">
+      <arg type="s" name="name"/>
+      <arg type="d" name="recv"/>
+      <arg type="d" name="send"/>
+      <arg type="i" name="pid"/>
+      <arg type="s" name="device"/>
+      <arg type="s" name="type"/>
+    </signal>
+    <signal name="NotifyGlobalData">
+      <arg type="d" name="recv"/>
+      <arg type="d" name="send"/>
+    </signal>
+    <method name="StartApp">
+    </method>
+    <method name="ExitApp">
+    </method>
+    <signal name="NotifyHeartbeat">
+    </signal> 
+    <method name="preInitialize">
+    </method>
+    <!--扫描 （全盘true/自定义false） -->
+    <method name="doDissection">
+        <arg name="bAllDissection" type="b" direction="in"></arg>
+        <arg name="sDissectionPath" type="s" direction="in"></arg>
+    </method>
+    <!--设置扫描状态 （暂停/继续/终止） -->
+    <method name="setDissection">
+        <arg name="eState" type="i" direction="in"></arg>
+    </method>
+    <!-- 修复问题文件 -->
+    <method name="repairProblemFile">
+        <arg name="sPath" type="s" direction="in"></arg>
+    </method>
+    <!-- 信任问题文件 (添加/移除) -->
+    <method name="reposeProblemFile">
+        <arg name="bFlag" type="b" direction="in"></arg>
+        <arg name="sPath" type="s" direction="in"></arg>
+    </method>
+    <!-- 隔离问题文件 (添加/移除) -->
+    <method name="sepProblemFile">
+        <arg name="bFlag" type="b" direction="in"></arg>
+        <arg name="sPath" type="s" direction="in"></arg>
+    </method>
+    <!-- 扫描回调函数对外信号 -->
+    <signal name="onDissectionResult">
+      <arg type="s" name="sPath"/>
+      <arg type="d" name="dProgress"/>
+      <arg type="i" name="eType"/>
+      <arg type="s" name="sDetailInfo"/>
+    </signal>
+    <!-- 设置扫描状态回调函数对外信号 -->
+    <signal name="onSetDissectionStateResult">
+      <arg type="s" name="sPath"/>
+      <arg type="s" name="sMessage"/>
+    </signal>
+    <!-- 修复问题文件函数对外信号 -->
+    <signal name="onRepairProblemFileResult">
+      <arg type="s" name="sPath"/>
+      <arg type="s" name="sMessage"/>
+    </signal>
+    <!-- 信任问题文件函数对外信号 -->
+    <signal name="onReposeProblemFileResult">
+      <arg type="s" name="sPath"/>
+      <arg type="s" name="sMessage"/>
+    </signal>
+    <!-- 信任问题文件函数对外信号 -->
+    <signal name="onSepProblemFileResult">
+      <arg type="s" name="sPath"/>
+      <arg type="s" name="sMessage"/>
+    </signal>
+
+
+  </interface>
+</node>
