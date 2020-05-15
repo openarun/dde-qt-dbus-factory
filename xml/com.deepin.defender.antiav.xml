@@ -46,6 +46,12 @@
         <arg name="bFlag" type="b" direction="in"></arg>
         <arg name="sPath" type="s" direction="in"></arg>
     </method>
+    <!-- 查询信任文件 -->
+    <method name="queryReposeFile">
+    </method>
+    <!-- 查询隔离文件 -->
+    <method name="querySepFile">
+    </method>
     <!-- 扫描回调函数对外信号 -->
     <signal name="onDissectionResult">
       <arg type="s" name="sPath"/>
@@ -73,7 +79,16 @@
       <arg type="s" name="sPath"/>
       <arg type="s" name="sMessage"/>
     </signal>
-
+    <!-- 查询信任文件对外 -->
+    <signal name="signal_onQueryReposeFile">
+      <arg type="s" name="fileinfo"/>
+    </signal>
+    <!-- 查询隔离文件对外 -->
+    <signal name="signal_onQuerySepFile">
+      <arg type="s" name="fileinfo"/>
+    </signal>
+    <!-- 扫描完成信号 -->
+    <signal name="signal_doDissectionFinished"></signal>
 
   </interface>
 </node>
