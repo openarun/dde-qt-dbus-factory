@@ -36,6 +36,12 @@
           <method name="SetPrimary">
                <arg type="s" direction="in"></arg>
           </method>
+          <method name="SetMethodAdjustCCT">
+               <arg type="i" direction="in"></arg>
+          </method>
+          <method name="SetColorTemperature">
+               <arg type="i" direction="in"></arg>
+          </method>
           <method name="SwitchMode">
                <arg type="y" direction="in"></arg>
                <arg type="s" direction="in"></arg>
@@ -47,6 +53,9 @@
           <property name="Primary" type="s" access="read"></property>
           <property name="CurrentCustomId" type="s" access="read"></property>
           <property name="CustomIdList" type="as" access="read"></property>
+          <property name="MaxBacklightBrightness" type="u" access="read"></property>
+	  <property name="CurrentColorTemperature" type="i" access="read"></property>
+          <property name="MethodAdjustCCT" type="i" access="read"></property>
           <property name="PrimaryRect" type="(nnqq)" access="read">
               <annotation name="org.qtproject.QtDBus.QtTypeName" value="ScreenRect"/>
           </property>
