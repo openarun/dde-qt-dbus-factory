@@ -30,7 +30,8 @@
     </method>
     <!--设置扫描状态 （暂停/继续/终止） -->
     <method name="setDissection">
-        <arg name="eState" type="i" direction="in"></arg>
+        <arg name="eState" type="i" direction="in">
+        </arg>
     </method>
     <!-- 修复问题文件 -->
     <method name="repairProblemFile">
