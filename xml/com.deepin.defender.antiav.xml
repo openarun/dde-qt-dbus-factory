@@ -30,8 +30,7 @@
     </method>
     <!--设置扫描状态 （暂停/继续/终止） -->
     <method name="setDissection">
-        <arg name="eState" type="i" direction="in">
-        </arg>
+        <arg name="eState" type="i" direction="in"></arg>
     </method>
     <!-- 修复问题文件 -->
     <method name="repairProblemFile">
@@ -53,6 +52,13 @@
     <!-- 查询隔离文件 -->
     <method name="querySepFile">
     </method>
+    <!-- 版本查询 -->
+    <method name="queryVersion">
+    </method>
+    <!-- 版本后台更新 -->
+    <method name="updateVersion">
+    </method>
+
     <!-- 扫描回调函数对外信号 -->
     <signal name="onDissectionResult">
       <arg type="s" name="sPath"/>
@@ -90,6 +96,13 @@
     </signal>
     <!-- 扫描完成信号 -->
     <signal name="signal_doDissectionFinished"></signal>
-
+    <!-- 版本信号 -->
+    <signal name="signal_doQueryVersion">
+      <arg type="s" name="version"/>
+    </signal>
+    <!-- 版本更新结果 -->
+    <signal name="signal_UpdateVersionResult">
+      <arg type="b" name="flag"/>
+    </signal>
   </interface>
 </node>
