@@ -33,9 +33,14 @@
       <arg type="b" name="isbConnected"/>
       <arg type="s" name="infoStr"/>
     </signal>
-    <signal name="requestShowBlockAllSysNotify">
+    <signal name="requestNetworkConnet">
+      <arg type="s" name="sId"/>
+      <arg type="s" name="sAppName"/>
     </signal>
-    <signal name="requestShowOnlyWhiteListSysNotify">
+    <signal name="requestRemworkConnet">
+      <arg type="s" name="sId"/>
+      <arg type="s" name="sAppName"/>
     </signal>
+
   </interface>
 </node>
