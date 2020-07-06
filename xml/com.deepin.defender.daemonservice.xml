@@ -30,9 +30,6 @@
     <method name="GetPwdError">
       <arg name="error" type="s" direction="out"></arg>
     </method>
-  <method name="SetGesttingMaturityDay">
-    <arg name="value" type="i" direction="in"></arg>
-  </method>
   <method name="SetGsetting">
     <arg name="value" type="i" direction="in"></arg>
   </method>
@@ -41,9 +38,6 @@
   <method name="JumpScreenSecurity">
   </method>
   <method name="JumpUpdatePolicy">
-  </method>
-  <method name="GetSystemUpdate">
-    <arg name="value" type="i" direction="out"></arg>
   </method>
   <signal name="UpdateUI">
   </signal>
