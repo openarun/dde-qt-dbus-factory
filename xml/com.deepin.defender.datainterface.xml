@@ -120,6 +120,16 @@
         <arg type="(a(isssddd))" direction="out"/>
         <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderAppFlowList"/>
     </signal>
+    <!-- 流量详情test -->
+    <method name="GetAllProcInfos">
+        <arg name="procInfos" type="a(isbssssdddd)" direction="out"></arg>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="DefenderProcInfoList"/>
+    </method>
+    <signal name="sendProcInfos">
+        <arg type="(a(isbssssdddd))" direction="out"/>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
+    </signal>
+
     <!-- 流量详情名称解析 -->
     <method name="getProcessEnvironmentVariable">
     <arg name="pid" type="i" direction="in"/>
