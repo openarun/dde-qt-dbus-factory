@@ -43,8 +43,7 @@
     </method>
     <!-- 隔离问题文件 (添加/移除) -->
     <method name="sepProblemFile">
-        <arg name="bFlag" type="b" direction="in"></arg>
-        <arg name="sPath" type="s" direction="in"></arg>
+        <arg name="" type="b" direction="in"></arg>
     </method>
     <!-- 查询信任文件 -->
     <method name="queryReposeFile">
@@ -57,6 +56,10 @@
     </method>
     <!-- 版本后台更新 -->
     <method name="updateVersion">
+    </method>
+    <!-- 是否在扫描中 -->
+    <method name="isScanning">
+        <arg name="flag" type="b" direction="out"></arg>
     </method>
 
     <!-- 扫描回调函数对外信号 -->
