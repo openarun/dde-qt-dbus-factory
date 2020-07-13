@@ -43,7 +43,9 @@
     </method>
     <!-- 隔离问题文件 (添加/移除) -->
     <method name="sepProblemFile">
-        <arg name="" type="b" direction="in"></arg>
+        <arg name="bFlag" type="b" direction="in"></arg>
+        <arg name="sPath" type="s" direction="in">
+        </arg>
     </method>
     <!-- 查询信任文件 -->
     <method name="queryReposeFile">
