@@ -28,18 +28,23 @@
 #include <QtCore/QList>
 
 struct DefenderProcInfo {
-    int pid;
-    QString execPath; // 执行路径
+    int nPid;
+    QString sExecPath; // 执行路径
     bool isbSysApp; // 是否是系统应用
-    QString procName;
-    QString pkgName;
-    QString appName;
-    QString themeIcon;
+    QString sProcName;
+    // 启动器应用信息
+    QString sDesktopPath;
+    QString sPkgName;
+    QString sAppName;
+    QString sThemeIcon;
+    QString sID;
+    qint64 nCategoryID;
+    qint64 nTimeInstalled;
     // 流量信息
-    double downloadSpeed;
-    double uploadSpeed;
-    double downloads; //下载量
-    double uploads;
+    double dDownloadSpeed;
+    double dUploadSpeed;
+    double dDownloads; //下载量
+    double dUploads;
     bool operator!=(const DefenderProcInfo &procInfo);
 };
 

@@ -2,15 +2,15 @@
 
 bool DefenderProcInfo::operator!=(const DefenderProcInfo &procInfo)
 {
-    return !(this->pid == procInfo.pid);
+    return !(this->nPid == procInfo.nPid);
 }
 
 QDBusArgument &operator<<(QDBusArgument &argument, const DefenderProcInfo &procInfo)
 {
     argument.beginStructure();
-    argument << procInfo.pid << procInfo.execPath << procInfo.isbSysApp << procInfo.procName
-             << procInfo.pkgName << procInfo.appName << procInfo.themeIcon
-             << procInfo.downloadSpeed << procInfo.uploadSpeed << procInfo.downloads << procInfo.uploads;
+    argument << procInfo.nPid << procInfo.sExecPath << procInfo.isbSysApp << procInfo.sProcName
+             << procInfo.sPkgName << procInfo.sAppName << procInfo.sThemeIcon
+             << procInfo.dDownloadSpeed << procInfo.dUploadSpeed << procInfo.dDownloads << procInfo.dUploads;
     argument.endStructure();
     return argument;
 }
@@ -18,9 +18,9 @@ QDBusArgument &operator<<(QDBusArgument &argument, const DefenderProcInfo &procI
 const QDBusArgument &operator>>(const QDBusArgument &argument, DefenderProcInfo &procInfo)
 {
     argument.beginStructure();
-    argument >> procInfo.pid >> procInfo.execPath >> procInfo.isbSysApp >> procInfo.procName
-             >> procInfo.pkgName >> procInfo.appName >> procInfo.themeIcon
-             >> procInfo.downloadSpeed >> procInfo.uploadSpeed >> procInfo.downloads >> procInfo.uploads;
+    argument >> procInfo.nPid >> procInfo.sExecPath >> procInfo.isbSysApp >> procInfo.sProcName
+             >> procInfo.sPkgName >> procInfo.sAppName >> procInfo.sThemeIcon
+             >> procInfo.dDownloadSpeed >> procInfo.dUploadSpeed >> procInfo.dDownloads >> procInfo.dUploads;
     argument.endStructure();
     return argument;
 }
