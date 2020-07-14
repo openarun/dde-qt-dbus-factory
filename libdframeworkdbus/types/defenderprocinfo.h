@@ -45,6 +45,9 @@ struct DefenderProcInfo {
     double dUploadSpeed;        // 上传速度
     double dDownloads;          // 下载量
     double dUploads;            // 上传量
+
+    // 联网管控信息
+    QString sStatus;            // 状态 询问/允许/禁止
     bool operator!=(const DefenderProcInfo &procInfo);
 };
 
