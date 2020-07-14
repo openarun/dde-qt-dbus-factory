@@ -52,14 +52,6 @@
     </signal>
     <method name="setNetRemDialogClose">
     </method>
-
-    <signal name="requestNetAppsChange">
-        <arg type="(a(isbsssssslldddds))" direction="out"/>
-        <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
-    </signal>
-    <method name="getNetAppsInfo">
-    </method>
-
     <!-- 开机自启动 -->
     <method name="startLauncherManage">
         <arg name="value" type="b" direction="out"></arg>
@@ -130,12 +122,17 @@
     </signal>
     <!-- 流量详情test -->
     <method name="GetAllProcInfos">
-        <arg name="procInfos" type="a(isbsssssslldddds)" direction="out"></arg>
+        <arg name="procInfos" type="a(isbssssssllddddsss)" direction="out"></arg>
         <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="DefenderProcInfoList"/>
     </method>
     <signal name="sendProcInfos">
-        <arg type="(a(isbsssssslldddds))" direction="out"/>
+        <arg type="(a(isbssssssllddddsss))" direction="out"/>
         <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
+    </signal>
+    <signal name="SendAllAppFlowList">
+        <arg type="(a(isbssssssllddddsss))" direction="out"/>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
+        <arg type="s" name="sTimeRange"/>
     </signal>
 
     <!-- 流量详情名称解析 -->

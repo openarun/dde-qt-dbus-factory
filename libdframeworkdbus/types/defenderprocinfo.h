@@ -48,6 +48,10 @@ struct DefenderProcInfo {
 
     // 联网管控信息
     QString sStatus;            // 状态 询问/允许/禁止
+    QString sDefaultStatus;     // 默认状态
+
+    // 其他参数
+    QString sOtherParam;
     bool operator!=(const DefenderProcInfo &procInfo);
 };
 
