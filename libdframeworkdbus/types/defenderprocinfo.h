@@ -29,22 +29,22 @@
 
 struct DefenderProcInfo {
     int nPid;
-    QString sExecPath; // 执行路径
-    bool isbSysApp; // 是否是系统应用
-    QString sProcName;
+    QString sExecPath;          // 执行路径
+    bool isbSysApp;             // 是否是系统应用
+    QString sProcName;          //  进程名
     // 启动器应用信息
-    QString sDesktopPath;
-    QString sPkgName;
-    QString sAppName;
-    QString sThemeIcon;
-    QString sID;
-    qint64 nCategoryID;
-    qint64 nTimeInstalled;
+    QString sDesktopPath;       // 桌面文件路径
+    QString sPkgName;           // 包名
+    QString sAppName;           // 应用名
+    QString sThemeIcon;         // 图标路径
+    QString sID;                // 启动器中对应应用id
+    qint64 nCategoryID;         // 启动器中分类id
+    qint64 nTimeInstalled;      // 安装时间
     // 流量信息
-    double dDownloadSpeed;
-    double dUploadSpeed;
-    double dDownloads; //下载量
-    double dUploads;
+    double dDownloadSpeed;      // 下载速度
+    double dUploadSpeed;        // 上传速度
+    double dDownloads;          // 下载量
+    double dUploads;            // 上传量
     bool operator!=(const DefenderProcInfo &procInfo);
 };
 
