@@ -52,6 +52,14 @@
     </signal>
     <method name="setNetRemDialogClose">
     </method>
+
+    <signal name="requestNetAppsChange">
+        <arg type="(a(isbssssssllddddsss))" direction="out"/>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
+    </signal>
+    <method name="getNetAppsInfo">
+    </method>
+
     <!-- 开机自启动 -->
     <method name="startLauncherManage">
         <arg name="value" type="b" direction="out"></arg>
