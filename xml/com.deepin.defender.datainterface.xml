@@ -53,11 +53,16 @@
     <method name="setNetRemDialogClose">
     </method>
 
+    <!-- 联网管控/远程访问 -->
     <signal name="requestNetAppsChange">
         <arg type="(a(isbssssssllddddsss))" direction="out"/>
         <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
     </signal>
     <method name="getNetAppsInfo">
+    </method>
+    <method name="setNetAppStatusChange">
+        <arg name="sDkgName" type="s" direction="in"></arg>
+        <arg name="nStatus" type="n" direction="in"></arg>
     </method>
 
     <!-- 开机自启动 -->
