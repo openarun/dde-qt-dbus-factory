@@ -62,7 +62,7 @@
     </method>
     <method name="setNetAppStatusChange">
         <arg name="sDkgName" type="s" direction="in"></arg>
-        <arg name="nStatus" type="n" direction="in"></arg>
+        <arg name="nStatus" type="i" direction="in"></arg>
     </method>
 
     <!-- 开机自启动 -->
