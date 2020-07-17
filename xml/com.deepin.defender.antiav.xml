@@ -62,6 +62,10 @@
     <method name="isScanning">
         <arg name="flag" type="b" direction="out"></arg>
     </method>
+    <!-- 获得病毒库版本 -->
+    <method name="getVdbVersion">
+        <arg name="version" type="s" direction="out"></arg>
+    </method>
 
     <!-- 扫描回调函数对外信号 -->
     <signal name="onDissectionResult">
