@@ -14,4 +14,11 @@
   <method name="showScanByPath">
     <arg name="sPath" type="s" direction="in"/>
   </method>
+
+  <!-- 显示联网管控弹框 -->
+  <method name="showNetControlDialog">
+    <arg name="sDkgName" type="s" direction="in"/>
+    <arg name="sAppName" type="s" direction="in"/>
+  </method>
+
 </interface>
