@@ -27,4 +27,16 @@
     <arg name="sId" type="s" direction="in"/>
   </method>
 
+    <!-- 显示远程访问禁止弹框 -->
+    <method name="showRemControlDialog">
+      <arg name="sDkgName" type="s" direction="in"/>
+      <arg name="sAppName" type="s" direction="in"/>
+    </method>
+    <!-- 显示远程访问询问弹框 -->
+    <method name="showRemControlAskDialog">
+      <arg name="sDkgName" type="s" direction="in"/>
+      <arg name="sAppName" type="s" direction="in"/>
+      <arg name="sId" type="s" direction="in"/>
+    </method>
+
 </interface>

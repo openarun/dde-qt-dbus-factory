@@ -69,6 +69,21 @@
         <arg name="nType" type="i" direction="in"></arg>
     </method>
 
+    <signal name="requestRemAppsChange">
+        <arg type="(a(isbssssssllddddsss))" direction="out"/>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
+    </signal>
+    <method name="getRemAppsInfo">
+    </method>
+    <method name="setRemAppStatusChange">
+        <arg name="sDkgName" type="s" direction="in"></arg>
+        <arg name="nStatus" type="i" direction="in"></arg>
+    </method>
+    <method name="setRemRequestReply">
+        <arg name="sId" type="s" direction="in"></arg>
+        <arg name="nType" type="i" direction="in"></arg>
+    </method>
+
     <!-- 开机自启动 -->
     <method name="startLauncherManage">
         <arg name="value" type="b" direction="out"></arg>
