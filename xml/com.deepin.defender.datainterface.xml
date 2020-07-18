@@ -54,6 +54,10 @@
     </method>
 
     <!-- 联网管控/远程访问 -->
+    <method name="setFireWallSwitchStatus">
+        <arg name="isbFireWall" type="b" direction="in"></arg>
+    </method>
+
     <signal name="requestNetAppsChange">
         <arg type="(a(isbssssssllddddsss))" direction="out"/>
         <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
