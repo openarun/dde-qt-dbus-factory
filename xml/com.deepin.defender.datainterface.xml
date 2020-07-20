@@ -77,12 +77,6 @@
       <arg type="s" name="sID"/>
     </signal>
     <!-- 流量详情 -->
-    <property name="Display" type="(sssssssdddib)" access="read">
-        <annotation name="org.qtproject.QtDBus.QtTypeName" value="DefenderDisplay"/>
-    </property>
-    <property name="defenderAppFlow" type="(isssddd)" access="read">
-        <annotation name="org.qtproject.QtDBus.QtTypeName" value="DefenderAppFlow"/>
-    </property>
     <method name="notifyGetYesterdayFlowData">
     </method>
     <method name="notifyGetTodayFlowData">
@@ -103,24 +97,26 @@
     <method name="notifyGetAppThisMonthFlowData">
         <arg name="appname" type="s" direction="in"></arg>
     </method>
-    <signal name="updatedisplay">
+
+    <!-- 流量详情test -->
+    <method name="GetAllProcInfos">
+        <arg name="procInfos" type="a(isbssssssllsddddsss)" direction="out"></arg>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="DefenderProcInfoList"/>
+    </method>
+    <signal name="sendProcInfos">
+        <arg type="(a(isbssssssllsddddsss))" direction="out"/>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
     </signal>
-    <signal name="Display">
-          <arg type="(sssssssdddib)" direction="out"/>
-          <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderDisplay"/>
+    <signal name="SendAllAppFlowList">
+        <arg type="(a(isbssssssllsddddsss))" direction="out"/>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
+        <arg type="s" name="sTimeRange"/>
     </signal>
-    <signal name="displayflow">
-          <arg type="(a(sssssssdddib))" direction="out"/>
-          <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderDisplayList"/>
+    <signal name="SendAppFlowList">
+        <arg type="(a(isbssssssllsddddsss))" direction="out"/>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
     </signal>
-    <signal name="displayspped">
-          <arg type="(a(sssssssdddib))" direction="out"/>
-          <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderDisplayList"/>
-    </signal>
-    <signal name="sendAppFlowData">
-        <arg type="(a(isssddd))" direction="out"/>
-        <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderAppFlowList"/>
-    </signal>
+
     <!-- 流量详情名称解析 -->
     <method name="getProcessEnvironmentVariable">
     <arg name="pid" type="i" direction="in"/>
