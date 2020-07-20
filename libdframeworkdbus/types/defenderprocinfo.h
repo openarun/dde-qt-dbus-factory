@@ -41,6 +41,7 @@ struct DefenderProcInfo {
     qint64 nCategoryID;         // 启动器中分类id
     qint64 nTimeInstalled;      // 安装时间
     // 流量信息
+    QString sTimeyMdh;          // 流量信息时间
     double dDownloadSpeed;      // 下载速度
     double dUploadSpeed;        // 上传速度
     double dDownloads;          // 下载量

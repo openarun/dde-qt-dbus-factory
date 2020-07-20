@@ -11,7 +11,7 @@ QDBusArgument &operator<<(QDBusArgument &argument, const DefenderProcInfo &procI
     argument << procInfo.nPid << procInfo.sExecPath << procInfo.isbSysApp << procInfo.sProcName
              << procInfo.sDesktopPath << procInfo.sPkgName << procInfo.sAppName << procInfo.sThemeIcon
              << procInfo.sID << procInfo.nCategoryID << procInfo.nTimeInstalled
-             << procInfo.dDownloadSpeed << procInfo.dUploadSpeed << procInfo.dDownloads << procInfo.dUploads
+             << procInfo.sTimeyMdh << procInfo.dDownloadSpeed << procInfo.dUploadSpeed << procInfo.dDownloads << procInfo.dUploads
              << procInfo.sStatus << procInfo.sDefaultStatus << procInfo.sOtherParam;
     argument.endStructure();
     return argument;
@@ -23,7 +23,7 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, DefenderProcInfo 
     argument >> procInfo.nPid >> procInfo.sExecPath >> procInfo.isbSysApp >> procInfo.sProcName
              >> procInfo.sDesktopPath >> procInfo.sPkgName >> procInfo.sAppName >> procInfo.sThemeIcon
              >> procInfo.sID >> procInfo.nCategoryID >> procInfo.nTimeInstalled
-             >> procInfo.dDownloadSpeed >> procInfo.dUploadSpeed >> procInfo.dDownloads >> procInfo.dUploads
+             >> procInfo.sTimeyMdh >> procInfo.dDownloadSpeed >> procInfo.dUploadSpeed >> procInfo.dDownloads >> procInfo.dUploads
              >> procInfo.sStatus >> procInfo.sDefaultStatus >> procInfo.sOtherParam;
     argument.endStructure();
     return argument;
