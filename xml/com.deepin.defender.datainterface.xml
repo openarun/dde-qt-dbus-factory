@@ -9,8 +9,6 @@
     <signal name="NotifyHeartbeat">
     </signal>
 
-<<<<<<< HEAD
-=======
     <!-- 添加异常数据 -->
     <method name="notifyAppendThreatDataByPath">
         <arg name="sfilePath" type="s" direction="in"/>
@@ -34,7 +32,6 @@
         <arg name="spath" type="s" direction="out"/>
     </method>
 
->>>>>>> fix(nativirus) 新增病毒异常表的接口
     <!-- 联网管控/远程访问 -->
     <method name="setFireWallSwitchStatus">
         <arg name="isbFireWall" type="b" direction="in"></arg>
@@ -138,10 +135,6 @@
     <arg name="environmentname" type="s" direction="in"/>
     <arg type="s" direction="out"/>
     </method>
-<<<<<<< HEAD
-=======
-
->>>>>>> fix(nativirus) 新增病毒异常表的接口
     <property name="processInfo" type="(iss)" access="read">
         <annotation name="org.qtproject.QtDBus.QtTypeName" value="DefenderProcessInfo"/>
     </property>
