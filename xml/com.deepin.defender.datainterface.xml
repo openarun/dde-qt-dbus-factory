@@ -53,6 +53,41 @@
     <method name="setNetRemDialogClose">
     </method>
 
+    <!-- 联网管控/远程访问 -->
+    <method name="setFireWallSwitchStatus">
+        <arg name="isbFireWall" type="b" direction="in"></arg>
+    </method>
+
+    <signal name="requestNetAppsChange">
+        <arg type="(a(isbssssssllddddsss))" direction="out"/>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
+    </signal>
+    <method name="getNetAppsInfo">
+    </method>
+    <method name="setNetAppStatusChange">
+        <arg name="sDkgName" type="s" direction="in"></arg>
+        <arg name="nStatus" type="i" direction="in"></arg>
+    </method>
+    <method name="setNetRequestReply">
+        <arg name="sId" type="s" direction="in"></arg>
+        <arg name="nType" type="i" direction="in"></arg>
+    </method>
+
+    <signal name="requestRemAppsChange">
+        <arg type="(a(isbssssssllddddsss))" direction="out"/>
+        <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DefenderProcInfoList"/>
+    </signal>
+    <method name="getRemAppsInfo">
+    </method>
+    <method name="setRemAppStatusChange">
+        <arg name="sDkgName" type="s" direction="in"></arg>
+        <arg name="nStatus" type="i" direction="in"></arg>
+    </method>
+    <method name="setRemRequestReply">
+        <arg name="sId" type="s" direction="in"></arg>
+        <arg name="nType" type="i" direction="in"></arg>
+    </method>
+
     <!-- 开机自启动 -->
     <method name="startLauncherManage">
         <arg name="value" type="b" direction="out"></arg>
@@ -97,7 +132,6 @@
     <method name="notifyGetAppThisMonthFlowData">
         <arg name="appname" type="s" direction="in"></arg>
     </method>
-
     <!-- 流量详情test -->
     <method name="GetAllProcInfos">
         <arg name="procInfos" type="a(isbssssssllsddddsss)" direction="out"></arg>
@@ -123,30 +157,6 @@
     <arg name="environmentname" type="s" direction="in"/>
     <arg type="s" direction="out"/>
     </method>
-
-    <!-- 添加异常数据 -->
-    <method name="notifyAppendThreatDataByPath">
-        <arg name="sfilePath" type="s" direction="in"/>
-        <arg name="flag" type="b" direction="out"/>
-    </method>
-
-    <!-- 删除异常数据 -->
-    <method name="notifyDeleteThreatDataByPath">
-        <arg name="sfilePath" type="s" direction="in"/>
-        <arg name="flag" type="b" direction="out"/>
-    </method>
-
-    <!-- 查询异常数据 -->
-    <method name="notifySelectThreatDataByPath">
-        <arg name="sfilePath" type="s" direction="in"/>
-        <arg name="flag" type="b" direction="out"/>
-    </method>
-
-    <!-- 查询总的数据 -->
-    <method name="notifySelectThreatCount">
-        <arg name="spath" type="s" direction="out"/>
-    </method>
-
     <property name="processInfo" type="(iss)" access="read">
         <annotation name="org.qtproject.QtDBus.QtTypeName" value="DefenderProcessInfo"/>
     </property>
