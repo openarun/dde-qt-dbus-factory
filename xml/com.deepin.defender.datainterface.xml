@@ -8,11 +8,6 @@
     </method>
     <signal name="NotifyHeartbeat">
     </signal>
-    <!-- 联网管控/远程访问 -->
-    <!--  <property access="read" type="(sddiss)" name="singleFuncData"/>-->
-    <!--  <property access="read" type="d" name="globalRecv"/>-->
-    <property access="read" type="d" name="globalRecv"/>
-    <property access="readwrite" type="b" name="quitDefender"/>
 
     <!-- 联网管控/远程访问 -->
     <method name="setFireWallSwitchStatus">
