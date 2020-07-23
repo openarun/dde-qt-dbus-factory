@@ -158,4 +158,13 @@
         <arg type="i" name="to"/>
     </signal>
     
+    <method name="GetMultiTaskingStatus">
+        <arg type="b" name="isActive" direction="out"/>
+    </method>
+    <method name="SetMultiTaskingStatus">
+        <arg type="b" name="isActive" direction="in"/>
+    </method>
+    <method name="GetCurrentDesktopStatus">
+        <arg type="b" name="isDesktop" direction="out"/>
+    </method>
 </interface>
