@@ -15,6 +15,7 @@
     <property name="Sinks" type="ao" access="read"/>
     <property name="Sources" type="ao" access="read"/>
     <property name="Cards" type="s" access="read"/>
+    <property name="CardsWithoutUnavailable" type="s" access="read"/>
     <property name="DefaultSink" type="o" access="read"/>
     <property name="DefaultSource" type="o" access="read"/>
     <property name="MaxUIVolume" type="d" access="read"/>
