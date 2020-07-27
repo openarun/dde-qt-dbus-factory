@@ -15,6 +15,15 @@
     <arg name="sPath" type="s" direction="in"/>
   </method>
 
+  <!-- 显示联网管控界面弹框 -->
+  <method name="showFuncConnectNetControl">
+    <arg name="sDkgName" type="s" direction="in"/>
+  </method>
+  <!-- 显示远程访问界面弹框 -->
+  <method name="showFuncConnectRemControl">
+    <arg name="sDkgName" type="s" direction="in"/>
+  </method>
+
   <!-- 显示联网管控禁止弹框 -->
   <method name="showNetControlDialog">
     <arg name="sDkgName" type="s" direction="in"/>

@@ -66,6 +66,10 @@
     <method name="getVdbVersion">
         <arg name="version" type="s" direction="out"></arg>
     </method>
+    <!-- 后台更新版本 -->
+    <method name="backgroundUpdate"></method>
+    <!-- 后台更新版本 -->
+    <method name="scanThreatsFile"></method>
 
     <!-- 扫描回调函数对外信号 -->
     <signal name="onDissectionResult">
@@ -112,5 +116,9 @@
     <signal name="signal_UpdateVersionResult">
       <arg type="b" name="flag"/>
     </signal>
+    <!-- 后台更新 -->
+    <signal name="onBackgroundUpdate"></signal>
+    <!-- 查杀未处理异常文件 -->
+    <signal name="onRequstScanThreatsFile"></signal>
   </interface>
 </node>

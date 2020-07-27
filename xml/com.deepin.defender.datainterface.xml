@@ -48,8 +48,15 @@
         <arg name="nStatus" type="i" direction="in"></arg>
     </method>
     <method name="setNetRequestReply">
+    <arg name="sPkgName" type="s" direction="in"></arg>
         <arg name="sId" type="s" direction="in"></arg>
         <arg name="nType" type="i" direction="in"></arg>
+    </method>
+    <method name="setNetControlDefaultStatus">
+        <arg name="nDefault" type="i" direction="in"></arg>
+    </method>
+    <method name="getNetControlDefaultStatus">
+        <arg name="value" type="i" direction="out"></arg>
     </method>
 
     <signal name="requestRemAppsChange">
@@ -63,9 +70,17 @@
         <arg name="nStatus" type="i" direction="in"></arg>
     </method>
     <method name="setRemRequestReply">
+        <arg name="sPkgName" type="s" direction="in"></arg>
         <arg name="sId" type="s" direction="in"></arg>
         <arg name="nType" type="i" direction="in"></arg>
     </method>
+    <method name="setRemControlDefaultStatus">
+        <arg name="nDefault" type="i" direction="in"></arg>
+    </method>
+    <method name="getRemControlDefaultStatus">
+        <arg name="value" type="i" direction="out"></arg>
+    </method>
+
     <!-- 开机自启动 -->
     <method name="startLauncherManage">
         <arg name="value" type="b" direction="out"></arg>
@@ -135,6 +150,7 @@
     <arg name="environmentname" type="s" direction="in"/>
     <arg type="s" direction="out"/>
     </method>
+
     <property name="processInfo" type="(iss)" access="read">
         <annotation name="org.qtproject.QtDBus.QtTypeName" value="DefenderProcessInfo"/>
     </property>
