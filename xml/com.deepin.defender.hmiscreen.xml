@@ -1,40 +1,44 @@
 <interface name="com.deepin.defender.hmiscreen">
-  <method name="Show">
-  </method>
-  <method name="ShowModule">
+    <method name="Show">
+    </method>
+    <method name="ShowModule">
     <arg name="module" type="s" direction="in"/>
-  </method>
-  <method name="ShowPage">
+    </method>
+    <method name="ShowPage">
     <arg name="module" type="s" direction="in"/>
     <arg name="page" type="s" direction="in"/>
-  </method>
-  <method name="ExitApp">
-  </method>
-  <!-- 右键扫描 -->
-  <method name="showScanByPath">
+    </method>
+    <method name="ExitApp">
+    </method>
+    <!-- 显示设置弹框 -->
+    <method name="showSettingDialog">
+      <arg name="sGroupKey" type="s" direction="in"/>
+    </method>
+    <!-- 右键扫描 -->
+    <method name="showScanByPath">
     <arg name="sPath" type="s" direction="in"/>
-  </method>
+    </method>
 
-  <!-- 显示联网管控界面弹框 -->
-  <method name="showFuncConnectNetControl">
+    <!-- 显示联网管控界面弹框 -->
+    <method name="showFuncConnectNetControl">
     <arg name="sDkgName" type="s" direction="in"/>
-  </method>
-  <!-- 显示远程访问界面弹框 -->
-  <method name="showFuncConnectRemControl">
+    </method>
+    <!-- 显示远程访问界面弹框 -->
+    <method name="showFuncConnectRemControl">
     <arg name="sDkgName" type="s" direction="in"/>
-  </method>
+    </method>
 
-  <!-- 显示联网管控禁止弹框 -->
-  <method name="showNetControlDialog">
+    <!-- 显示联网管控禁止弹框 -->
+    <method name="showNetControlDialog">
     <arg name="sDkgName" type="s" direction="in"/>
     <arg name="sAppName" type="s" direction="in"/>
-  </method>
-  <!-- 显示联网管控询问弹框 -->
-  <method name="showNetControlAskDialog">
+    </method>
+    <!-- 显示联网管控询问弹框 -->
+    <method name="showNetControlAskDialog">
     <arg name="sDkgName" type="s" direction="in"/>
     <arg name="sAppName" type="s" direction="in"/>
     <arg name="sId" type="s" direction="in"/>
-  </method>
+    </method>
 
     <!-- 显示远程访问禁止弹框 -->
     <method name="showRemControlDialog">
