@@ -116,6 +116,8 @@
     </method>
     <method name="notifyGetThisMonthFlowData">
     </method>
+    <method name="NotifyDontGetFlowData">
+    </method>
     <method name="notifyGetAppYesterdayFlowData">
         <arg name="appname" type="s" direction="in"></arg>
     </method>

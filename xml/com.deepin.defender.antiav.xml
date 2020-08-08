@@ -68,8 +68,12 @@
     </method>
     <!-- 后台更新版本 -->
     <method name="backgroundUpdate"></method>
-    <!-- 后台更新版本 -->
+    <!-- 查杀未处理异常文件 -->
     <method name="scanThreatsFile"></method>
+    <!-- 设置主程序是否处于病毒扫描页面 -->
+    <method name="SetIsbInVirusScanningPage">
+        <arg name="isbOn" type="b" direction="in"></arg>
+    </method>
 
     <!-- 扫描回调函数对外信号 -->
     <signal name="onDissectionResult">
