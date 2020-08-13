@@ -37,21 +37,38 @@
         <arg name="str" type="s" direction="out"></arg>
     </method>
     <method name="WriteConnectionRecord">
-        <arg name="sInfos" type="s" direction="in"></arg>
-    </method>
-    <method name="WriteConnectionWhiteLst">
-        <arg name="sWhiteList" type="s" direction="in"></arg>
+        <arg name="sName" type="s" direction="in"></arg>
+        <arg name="sDatetime" type="s" direction="in"></arg>
+        <arg name="sStatus" type="s" direction="in"></arg>
+        <arg name="sSerial" type="s" direction="in"></arg>
+        <arg name="sVendorID" type="s" direction="in"></arg>
+        <arg name="sProductID" type="s" direction="in"></arg>
+        <arg name="sParentSize" type="s" direction="in"></arg>
+        <arg name="sSize" type="s" direction="in"></arg>
     </method>
     <method name="ClearUsbConnectionLog">
+    </method>
+    <method name="WriteConnectionWhiteLst">
+        <arg name="sName" type="s" direction="in"></arg>
+        <arg name="sDatetime" type="s" direction="in"></arg>
+        <arg name="sStatus" type="s" direction="in"></arg>
+        <arg name="sSerial" type="s" direction="in"></arg>
+        <arg name="sVendorID" type="s" direction="in"></arg>
+        <arg name="sProductID" type="s" direction="in"></arg>
+        <arg name="sParentSize" type="s" direction="in"></arg>
+        <arg name="sSize" type="s" direction="in"></arg>
+    </method>
+    <method name="RemoveFromWhiteLst">
+        <arg name="sName" type="s" direction="in"></arg>
+        <arg name="sSerial" type="s" direction="in"></arg>
+        <arg name="sVendorID" type="s" direction="in"></arg>
+        <arg name="sProductID" type="s" direction="in"></arg>
     </method>
     <method name="ChangeIsbSaveRecord">
         <arg name="change" type="b" direction="in"></arg>
     </method>
     <method name="SelectLimitationModel">
         <arg name="sModel" type="s" direction="in"></arg>
-    </method>
-    <method name="SetConnectionWhiteList">
-        <arg name="list" type="s" direction="in"></arg>
     </method>
 
     <method name="GetRecordSaveSwitch">
