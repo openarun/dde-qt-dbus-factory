@@ -74,6 +74,8 @@
     <method name="SetIsbInVirusScanningPage">
         <arg name="isbOn" type="b" direction="in"></arg>
     </method>
+    <!-- 设置扫描开始  -->
+    <method name="setScanStart"></method>
 
     <!-- 扫描回调函数对外信号 -->
     <signal name="onDissectionResult">
@@ -122,6 +124,8 @@
     </signal>
     <!-- 后台更新 -->
     <signal name="onBackgroundUpdate"></signal>
+    <!-- 后台更新 -->
+    <signal name="onSendScanStart"></signal>
     <!-- 查杀未处理异常文件 -->
     <signal name="onRequstScanThreatsFile"></signal>
   </interface>
