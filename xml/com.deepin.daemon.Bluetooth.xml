@@ -6,6 +6,7 @@
     </method>
     <method name="ConnectDevice">
         <arg direction="in" type="o"/>
+        <arg name="adapter" type="o" direction="in"></arg>
     </method>
     <method name="DebugInfo">
         <arg direction="out" type="s"/>
@@ -110,6 +111,8 @@
     </signal>
     <signal name="PinCancle">
         <arg type="s"/>
+    <signal name="ConnectFailed">
+        <arg name="device" type="o"></arg>
     </signal>
     <property access="read" name="State" type="u"/>
 </interface>
