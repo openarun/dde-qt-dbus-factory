@@ -62,6 +62,9 @@
     <method name="isScanning">
         <arg name="flag" type="b" direction="out"></arg>
     </method>
+    <method name="isTrueScanning">
+        <arg name="flag" type="b" direction="out"></arg>
+    </method>
     <!-- 获得病毒库版本 -->
     <method name="getVdbVersion">
         <arg name="version" type="s" direction="out"></arg>
