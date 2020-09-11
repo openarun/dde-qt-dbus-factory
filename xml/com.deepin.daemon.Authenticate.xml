@@ -3,4 +3,9 @@
         <arg name="flag" type="i" direction="in"></arg>
         <arg name="result" type="s" direction="out"></arg>
     </method>
+
+    <method name="CheckUserPreOneKeyLogin">
+        <arg name="flag" type="i" direction="in"></arg>
+        <arg name="result" type="s" direction="out"></arg>
+    </method>
 </interface>
