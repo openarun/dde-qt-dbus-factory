@@ -25,7 +25,7 @@
 
 #include "zoneinfo.h"
 
-ZoneInfo::ZoneInfo()
+ZoneInfo::ZoneInfo() : m_utcOffset(0), i2(0), i3(0), i4(0)
 {
 
 }

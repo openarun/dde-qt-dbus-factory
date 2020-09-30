@@ -33,7 +33,7 @@ void registerResolutionMetaType()
     qDBusRegisterMetaType<Resolution>();
 }
 
-Resolution::Resolution()
+Resolution::Resolution() : m_id(0), m_width(0), m_height(0), m_rate(0.0)
 {
 
 }
