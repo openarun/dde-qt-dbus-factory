@@ -35,6 +35,13 @@
          <arg name="count" type="i" direction="out"/>
     </method>
 
+    <!-- 联网管控/远程访问 -->
+    <method name="setFireWallSwitchStatus">
+        <arg name="isbFireWall" type="b" direction="in"></arg>
+    </method>
+    <method name="getFireWallSwitchStatus">
+        <arg name="value" type="b" direction="out"></arg>
+    </method>
 
     <!-- 联网管控/远程访问开关状态设置 -->
     <method name="setNetControlSwitchStatus">
