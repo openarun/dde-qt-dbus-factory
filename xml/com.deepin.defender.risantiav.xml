@@ -1,0 +1,92 @@
+<node>
+  <interface name="com.deepin.defender.risantiav">
+    <method name="startApp">
+    </method>
+    <method name="exitApp">
+    </method>
+    <method name="preInitialize">
+    </method>
+    <!-- 设置扫描文件大小 M -->
+    <method name="setScanFileSize">
+        <arg name="nSize" type="i" direction="in"></arg>
+    </method>
+    <!-- 获得当前病毒版本 -->
+    <method name="getRXLocalVersion"></method>
+    <!-- 获得服务病毒版本 -->
+    <method name="getRXServreVersion"></method>
+    <!-- 是否在扫描中 -->
+    <method name="isScanning">
+       <arg name="flag" type="b" direction="out"></arg>
+    </method>
+    <!-- 扫描 -->
+    <method name="dissection">
+         <arg name="isFull" type="b" direction="in"></arg>
+         <arg name="sDissectionPath" type="s" direction="in"></arg>
+   </method>
+   <!-- 设置扫描状态 -->
+   <method name="setDissectionStatus">
+       <arg name="eState" type="i" direction="in"></arg>
+   </method>
+   <!-- 修复问题文件 -->
+   <method name="repairProblemFile">
+       <arg name="sPath" type="s" direction="in"></arg>
+   </method>
+   <!-- 信任问题文件 -->
+   <method name="trustProblemFile">
+       <arg name="bFlag" type="b" direction="in"></arg>
+       <arg name="sPath" type="s" direction="in"></arg>
+   </method>
+   <!-- 隔离问题文件 -->
+   <method name="isolationProblemFile">
+      <arg name="bFlag" type="b" direction="in"></arg>
+      <arg name="sPath" type="s" direction="in"></arg>
+   </method>
+   <!-- 查询信任文件 -->
+   <method name="queryTrustFiles"></method>
+   <!-- 查询隔离文件 -->
+   <method name="queryIsolationFiles"></method>
+
+    <!--- 发送本地病毒版本　-->
+    <signal name="sendLocalVersion">
+      <arg type="s" name="version"/>
+    </signal>
+    <!--- 发送服务病毒版本　-->
+    <signal name="sendServerVersion">
+      <arg type="s" name="version"/>
+    </signal>
+    <!--- 发送病毒库更新结果　-->
+    <signal name="sendUpdateVersionResult">
+      <arg type="b" name="result"/>
+    </signal>
+    <!--- 发送扫描信号结束信号　-->
+    <signal name="sendDissectionFinish">
+    </signal>
+    <!--- 扫描回调函数对外信号　-->
+    <signal name="sendDissectionInfo">
+      <arg type="s" name="path"/>
+      <arg type="d" name="progress"/>
+      <arg type="i" name="type"/>
+      <arg type="s" name="sDetailInfo"/>
+    </signal>
+    <!--- 发送操作信任文件　-->
+    <signal name="sendOperationRepairFile">
+      <arg type="s" name="file"/>
+    </signal>
+    <!--- 发送操作信任文件　-->
+    <signal name="sendOperationTrustFile">
+      <arg type="s" name="file"/>
+    </signal>
+    <!--- 发送操作隔离文件　-->
+    <signal name="sendOperationIsolationFile">
+      <arg type="s" name="file"/>
+    </signal>
+    <!--- 发送查询信任文件　-->
+    <signal name="sendQueryTrustFiles">
+      <arg type="s" name="files"/>
+    </signal>
+    <!--- 发送查询隔离文件　-->
+    <signal name="sendQueryIsolationFiles">
+      <arg type="s" name="files"/>
+    </signal>
+  </interface>
+</node>

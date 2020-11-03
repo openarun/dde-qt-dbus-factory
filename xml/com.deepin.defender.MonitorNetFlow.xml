@@ -24,6 +24,16 @@
     </signal>
     <signal name="NotifyHeartbeat">
     </signal>
+
+    <!-- 设置ssh远程登陆端口状态 -->
+    <method name="setRemRegisterStatus">
+        <arg name="bStatus" type="b" direction="in"></arg>
+    </method>
+    <!-- 获取ssh远程登陆端口状态 -->
+    <method name="getRemRegisterStatus">
+        <arg name="bStatus" type="b" direction="out"></arg>
+    </method>
+
     <!-- usb connection -->
     <!-- 将待发送设备信息整合成字符串 -->
     <method name="MergeDevSavingInfoToStr">

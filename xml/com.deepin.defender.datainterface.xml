@@ -36,12 +36,12 @@
     </method>
 
 
-    <!-- 联网管控/远程访问 -->
-    <method name="setFireWallSwitchStatus">
+    <!-- 联网管控/远程访问开关状态设置 -->
+    <method name="setNetControlSwitchStatus">
         <arg name="isbFireWall" type="b" direction="in"></arg>
     </method>
-    <method name="getFireWallSwitchStatus">
-        <arg name="value" type="b" direction="out"></arg>
+    <method name="setRemControlSwitchStatus">
+        <arg name="isbFireWall" type="b" direction="in"></arg>
     </method>
 
     <signal name="requestNetAppsChange">
@@ -113,7 +113,14 @@
       <arg name="sAppName" type="s" direction="in"/>
       <arg name="sId" type="s" direction="in"/>
     </method>
-
+    <!-- 设置ssh远程登陆端口状态 -->
+    <method name="setRemRegisterStatus">
+        <arg name="bStatus" type="b" direction="in"></arg>
+    </method>
+    <!-- 获取ssh远程登陆端口状态 -->
+    <method name="getRemRegisterStatus">
+        <arg name="bStatus" type="b" direction="out"></arg>
+    </method>
     <!-- 开机自启动 -->
     <method name="startLauncherManage">
         <arg name="value" type="b" direction="out"></arg>
