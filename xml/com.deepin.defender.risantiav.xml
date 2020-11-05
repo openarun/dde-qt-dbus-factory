@@ -14,6 +14,8 @@
     <method name="getRXLocalVersion"></method>
     <!-- 获得服务病毒版本 -->
     <method name="getRXServreVersion"></method>
+    <!-- 更新病毒库 -->
+    <method name="updateVersion"></method>
     <!-- 是否在扫描中 -->
     <method name="isScanning">
        <arg name="flag" type="b" direction="out"></arg>
@@ -45,6 +47,14 @@
    <method name="queryTrustFiles"></method>
    <!-- 查询隔离文件 -->
    <method name="queryIsolationFiles"></method>
+   <!-- 获得信任区域的数量 -->
+   <method name="getTrustAreaSize">
+      <arg name="size" type="i" direction="out"></arg>
+   </method>
+   <!-- 获得隔离区域的数量 -->
+   <method name="getIsolationAreaSize">
+      <arg name="size" type="i" direction="out"></arg>
+   </method>
 
     <!--- 发送本地病毒版本　-->
     <signal name="sendLocalVersion">

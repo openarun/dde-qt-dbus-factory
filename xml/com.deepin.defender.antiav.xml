@@ -79,6 +79,14 @@
     </method>
     <!-- 设置扫描开始  -->
     <method name="setScanStart"></method>
+    <!-- 获得信任区域的数量 -->
+    <method name="getTrustAreaSize">
+       <arg name="size" type="i" direction="out"></arg>
+    </method>
+    <!-- 获得隔离区域的数量 -->
+    <method name="getIsolationAreaSize">
+       <arg name="size" type="i" direction="out"></arg>
+    </method>
 
     <!-- 扫描回调函数对外信号 -->
     <signal name="onDissectionResult">
