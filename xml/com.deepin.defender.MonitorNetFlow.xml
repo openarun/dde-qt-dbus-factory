@@ -10,6 +10,12 @@
         <arg name="sId" type="s" direction="in"></arg>
         <arg name="value" type="s" direction="out"></arg>
     </method>
+
+    <!-- 开启/关闭进程流量监控功能 -->
+        <method name="EnableNetFlowMonitor">
+            <arg name="enable" type="b" direction="in"></arg>
+        </method>
+
     <signal name="NotifyDetailData">
       <arg type="s" name="name"/>
       <arg type="d" name="recv"/>
